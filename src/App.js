@@ -19,7 +19,7 @@ function App() {
   ]);
 
   React.useEffect(() => {
-    if (localStorage.getItem("tasks"))
+    if (localStorage && localStorage.getItem("tasks"))
       setTasks(JSON.parse(localStorage.getItem("tasks")));
   }, []);
 
